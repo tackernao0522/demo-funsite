@@ -64,7 +64,7 @@ class Payment extends Model
         \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
 
         try {
-            $cutomer = \Stripe\Customer::retrieve($user->stripe_id);
+            $customer = \Stripe\Customer::retrieve($user->stripe_id);
             $card = $customer->sources->create(['source' => $token]);
 
             if (isset($customer)) {
