@@ -18,13 +18,19 @@
 |        | GET|HEAD | password/confirm       | password.confirm     | App\Http\Controllers\Auth\ConfirmPasswordController@showConfirmForm    | web        |
 |        |          |                        |                      |                                                                        | auth       |
 |        | POST     | password/email         | password.email       | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web        |
-|        | GET|HEAD | password/reset         | password.request     | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web        |
 |        | POST     | password/reset         | password.update      | App\Http\Controllers\Auth\ResetPasswordController@reset                | web        |
+|        | GET|HEAD | password/reset         | password.request     | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web        |
 |        | GET|HEAD | password/reset/{token} | password.reset       | App\Http\Controllers\Auth\ResetPasswordController@showResetForm        | web        |
 |        | POST     | register               |                      | App\Http\Controllers\Auth\RegisterController@register                  | web        |
 |        |          |                        |                      |                                                                        | guest      |
 |        | GET|HEAD | register               | register             | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web        |
 |        |          |                        |                      |                                                                        | guest      |
+|        | POST     | user/cancel            | user.cancel          | App\Http\Controllers\UserController@cancelPaidMember                   | web        |
+|        |          |                        |                      |                                                                        | auth       |
+|        | GET|HEAD | user/info              | user.info            | App\Http\Controllers\UserController@getUserInfo                        | web        |
+|        |          |                        |                      |                                                                        | auth       |
+|        | POST     | user/paid              | user.paid            | App\Http\Controllers\UserController@becomePaidMember                   | web        |
+|        |          |                        |                      |                                                                        | auth       |
 |        | GET|HEAD | user/payment           | user.payment         | App\Http\Controllers\User\PaymentController@getCurrentPayment          | web        |
 |        |          |                        |                      |                                                                        | auth       |
 |        | POST     | user/payment/destory   | user.payment.destroy | App\Http\Controllers\User\PaymentController@deletePaymentInfo          | web        |

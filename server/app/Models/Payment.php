@@ -95,7 +95,7 @@ class Payment extends Model
      * @param object $customer・・・Stripe上に登録されている顧客オブジェクト
      * @param object $default_card・・・・・Stripe上から取得した顧客の「使用カード」オブジェクト
      */
-    protected static function getDafaultcard($user)
+    protected static function getDefaultcard($user)
     {
         \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));
 
