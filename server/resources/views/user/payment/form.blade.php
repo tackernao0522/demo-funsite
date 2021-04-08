@@ -47,6 +47,6 @@
 </div>
 @endsection
 
-<form action="">
+<form action="{{route("user.update", ['id'=>$data["id"]])}}">
 
 </form>
