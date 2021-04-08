@@ -12,6 +12,6 @@ class PaymentController extends Controller
 {
     public function getPaymentForm()
     {
-        return view('users.payments.form');
+        return view('user.payment.form');
     }
 }
