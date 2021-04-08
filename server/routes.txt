@@ -26,6 +26,9 @@
 |        | GET|HEAD | register               | register           | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web        |
 |        |          |                        |                    |                                                                        | guest      |
 |        | GET|HEAD | user/payment           | user.payment       | App\Http\Controllers\User\PaymentController@getCurrentPayment          | web        |
+|        |          |                        |                    |                                                                        | auth       |
 |        | GET|HEAD | user/payment/form      | user.payment.form  | App\Http\Controllers\User\PaymentController@getPaymentForm             | web        |
+|        |          |                        |                    |                                                                        | auth       |
 |        | POST     | user/payment/store     | user.payment.store | App\Http\Controllers\User\PaymentController@storePaymentInfo           | web        |
+|        |          |                        |                    |                                                                        | auth       |
 +--------+----------+------------------------+--------------------+------------------------------------------------------------------------+------------+
