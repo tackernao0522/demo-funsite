@@ -6,6 +6,11 @@ jobs:
     steps:
       - checkout
       - run: sudo  composer self-update
+      - restore_cache:
+          key: composer-v1-{{ checksum "./server/composer.lock" }}
       - run: composer install -n --prefer-dist --working-dir=./server/
+      - save_cache:
+          key: composer-v1-{{ checksum "./server/composer.lock" }}
+          paths: ./server/vendor
       - run: cd server/; npm ci
       - run: cd server/; npm run dev
