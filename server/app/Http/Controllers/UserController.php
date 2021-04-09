@@ -23,6 +23,14 @@ class UserController extends Controller
         return view('user.index', compact('user', 'defaultCard'));
     }
 
+    public function editUserInfo()
+    {
+        $user = Auth::user();
+        $interests = Interest::all();
+
+        return view('user.edit', compact(['user', 'interests']));
+    }
+
     public function becomePaidMember(Request $request)
     {
         \Stripe\Stripe::setApiKey(\Config::get('payment.stripe_secret_key'));

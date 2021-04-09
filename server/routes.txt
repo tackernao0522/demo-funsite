@@ -13,9 +13,9 @@
 |        | POST     | login                  |                      | App\Http\Controllers\Auth\LoginController@login                        | web        |
 |        |          |                        |                      |                                                                        | guest      |
 |        | POST     | logout                 | logout               | App\Http\Controllers\Auth\LoginController@logout                       | web        |
-|        | POST     | password/confirm       |                      | App\Http\Controllers\Auth\ConfirmPasswordController@confirm            | web        |
-|        |          |                        |                      |                                                                        | auth       |
 |        | GET|HEAD | password/confirm       | password.confirm     | App\Http\Controllers\Auth\ConfirmPasswordController@showConfirmForm    | web        |
+|        |          |                        |                      |                                                                        | auth       |
+|        | POST     | password/confirm       |                      | App\Http\Controllers\Auth\ConfirmPasswordController@confirm            | web        |
 |        |          |                        |                      |                                                                        | auth       |
 |        | POST     | password/email         | password.email       | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web        |
 |        | POST     | password/reset         | password.update      | App\Http\Controllers\Auth\ResetPasswordController@reset                | web        |
@@ -26,6 +26,8 @@
 |        | GET|HEAD | register               | register             | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web        |
 |        |          |                        |                      |                                                                        | guest      |
 |        | POST     | user/cancel            | user.cancel          | App\Http\Controllers\UserController@cancelPaidMember                   | web        |
+|        |          |                        |                      |                                                                        | auth       |
+|        | GET|HEAD | user/edit              | user.edit            | App\Http\Controllers\UserController@editUserInfo                       | web        |
 |        |          |                        |                      |                                                                        | auth       |
 |        | GET|HEAD | user/info              | user.info            | App\Http\Controllers\UserController@getUserInfo                        | web        |
 |        |          |                        |                      |                                                                        | auth       |
@@ -38,5 +40,7 @@
 |        | GET|HEAD | user/payment/form      | user.payment.form    | App\Http\Controllers\User\PaymentController@getPaymentForm             | web        |
 |        |          |                        |                      |                                                                        | auth       |
 |        | POST     | user/payment/store     | user.payment.store   | App\Http\Controllers\User\PaymentController@storePaymentInfo           | web        |
+|        |          |                        |                      |                                                                        | auth       |
+|        | POST     | user/update            | user.update          | App\Http\Controllers\UserController@updateUserInfo                     | web        |
 |        |          |                        |                      |                                                                        | auth       |
 +--------+----------+------------------------+----------------------+------------------------------------------------------------------------+------------+
