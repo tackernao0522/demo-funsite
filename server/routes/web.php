@@ -22,6 +22,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user/info', 'UserController@getUserInfo')->name('user.info');
+Route::get('/user/edit', 'UserController@editUserInfo')->name('user.edit');
+Route::post('/user/update', 'UserController@updateUserInfo')->name('user.update');
+
 Route::post('/user/paid', 'UserController@becomePaidMember')->name('user.paid');
 Route::post('/user/cancel', 'UserController@cancelPaidMember')->name('user.cancel');
 

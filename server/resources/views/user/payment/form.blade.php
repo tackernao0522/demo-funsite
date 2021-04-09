@@ -10,7 +10,7 @@
       </div>
       @endif
       <div class="card">
-        <div class="card-header">クレジット登録</div>
+        <div class="card-header">クレジットカード登録</div>
 
         <div class="card-body">
           <form action="{{route('user.payment.store')}}" class="card-form" id="form_payment" method="POST">
@@ -34,12 +34,11 @@
               <label for="name">カード名義</label>
               <input type="text" name="cardName" id="cardName" class="form-control" value="" placeholder="カード名義を入力">
             </div>
-
             <div class="form-group">
               <button type="submit" id="create_token" class="btn btn-primary">カードを登録する</button>
             </div>
           </form>
-          <a href="{{ route('user.payment') }}">クレジットカード情報ページに戻る</a>
+          <a href="{{route('user.payment')}}">クレジットカード情報ページに戻る</a>
         </div>
       </div>
     </div>
@@ -47,6 +46,9 @@
 </div>
 @endsection
 
+
 <form action="{{route("user.update", ['id'=>$data["id"] ?? ''])}}">
+
+
 
 </form>
