@@ -10,8 +10,8 @@ RUN apt-get update \
 #Composer install
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
-COPY --from=node:10.22 /usr/local/bin /usr/local/bin
-COPY --from=node:10.22 /usr/local/lib /usr/local/lib
+COPY --from=node:12.14 /usr/local/bin /usr/local/bin
+COPY --from=node:12.14 /usr/local/lib /usr/local/lib
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
